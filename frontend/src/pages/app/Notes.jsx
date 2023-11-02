@@ -35,7 +35,7 @@ function Notes() {
                 <Sidebar/>    
             </div>
             <div style={{ marginLeft: "25px", marginTop: "25px" }}>
-                <h1>Note Taking Page</h1>
+                <h1>Note / Student Taking Page</h1>
                 <br />
                 <div style={{ display: "flex", flexDirection: "column" }}>
                     <input 
