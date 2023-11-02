@@ -9,10 +9,12 @@ from src.paths import (
 
 app = FastAPI()
 
+# allow_origins=["https://saio-school-copy.vercel.app/app/notes", "http://localhost:5173", "http://127.0.0.1:5173", "https://saio-school-copy.vercel.app/", "https://saio-school-copy-git-main-derenb.vercel.app/", "https://saio-school-copy-c2cojvt6b-derenb.vercel.app/"],
+
 # Middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://saio-school-copy.vercel.app/app/notes", "http://localhost:5173", "http://127.0.0.1:5173", "https://saio-school-copy.vercel.app/", "https://saio-school-copy-git-main-derenb.vercel.app/", "https://saio-school-copy-c2cojvt6b-derenb.vercel.app/"],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
