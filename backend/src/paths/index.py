@@ -7,4 +7,4 @@ router = APIRouter(
 
 @router.get("/", include_in_schema=False)
 def index():
-    return RedirectResponse("/docs")
+    return RedirectResponse("/")
