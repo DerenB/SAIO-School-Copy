@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import apiUrl from '../config'
 
 export default function Login(props) {
   const navigate = useNavigate();
@@ -13,12 +12,12 @@ export default function Login(props) {
   const handleSubmit = async(e) => {
       e.preventDefault();
       try {
-        const response1 = await axios.get(`${config.apiUrl}/signup/check-email/${email}`);
+        const response1 = await axios.get(`https://murmuring-mountain-02075-1c8c6be3c4e7.herokuapp.com//signup/check-email/${email}`);
         const data1 = response1.data;
   
         setEmailExists(data1.email_exists);
 
-        const response2 = await axios.get(`${config.apiUrl}/signup/check-password/${pass}`);
+        const response2 = await axios.get(`https://murmuring-mountain-02075-1c8c6be3c4e7.herokuapp.com//signup/check-password/${pass}`);
         const data2 = response2.data;
   
         setPasswordExists(data2.password_exists);

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import config from '../config';
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -30,7 +29,7 @@ const Signup = () => {
     const { confirmPassword, ...dataToSend } = formData;
   
     try {
-      const response = await axios.post(`${config.apiUrl}/signup`, dataToSend, {
+      const response = await axios.post("https://murmuring-mountain-02075-1c8c6be3c4e7.herokuapp.com/signup", dataToSend, {
         headers: {
           'Content-Type': 'application/json',
         },

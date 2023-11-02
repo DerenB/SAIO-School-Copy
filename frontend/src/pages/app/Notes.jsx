@@ -2,9 +2,6 @@ import Sidebar from "../../components/sidebar/Sidebar";
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import config from '../../config'
-
-
 
 function Notes() {
     // Page Title
@@ -18,7 +15,7 @@ function Notes() {
 
     // CREATE-POST a note
     const addStudentHandler = () => {
-        axios.post(`${config.apiUrl}/student`, {
+        axios.post("https://murmuring-mountain-02075-1c8c6be3c4e7.herokuapp.com/student", {
             'firstName': firstName,
             'lastName': lastName
         }).then(res => console.log(res))
